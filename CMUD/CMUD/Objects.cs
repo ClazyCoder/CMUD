@@ -11,9 +11,15 @@ namespace CMUD
         protected int _mp;
         protected int x;
         protected int y;
+        protected int mapNum;
         public Object()
         {
 
+        }
+        public void Move(int x, int y)
+        {
+            this.x = x;
+            this.y = y;
         }
     }
     class Player : Object
@@ -25,6 +31,7 @@ namespace CMUD
             this._mp = _mp;
             this.x = 0;
             this.y = 0;
+            this.mapNum = 0;
         }
     }
     class Monster : Object
@@ -36,6 +43,7 @@ namespace CMUD
             this._mp = _mp;
             this.x = 0;
             this.y = 0;
+            this.mapNum = 0;
         }
     }
 }
