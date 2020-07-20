@@ -5,6 +5,7 @@ using System.Threading;
 using System.Net;
 using System.Net.Sockets;
 using System.Numerics;
+using System.Runtime.InteropServices;
 
 namespace CMUD
 {
@@ -37,7 +38,25 @@ namespace CMUD
                 lock (_clients)
                 {
                     _clients.Add(client);
+                    Thread t = new Thread(new ParameterizedThreadStart(ClientProcessRoutine));
+                    t.Start(client);
                 }
+            }
+        }
+        public void ClientProcessRoutine(object obj)
+        {
+            try
+            {
+                Client client = obj as Client;
+                NetworkStream ns = client.getStream();
+                while (_isRunning)
+                {
+
+                }
+            }
+            catch(Exception ex)
+            {
+                
             }
         }
     }
@@ -48,6 +67,10 @@ namespace CMUD
         public Client(TcpClient client)
         {
 
+        }
+        public NetworkStream getStream()
+        {
+            return client.GetStream();
         }
     }
 }
