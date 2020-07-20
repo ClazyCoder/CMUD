@@ -46,4 +46,16 @@ namespace CMUD
             this.mapNum = 0;
         }
     }
+    class NPC : Object
+    {
+        public NPC(string _name, int _hp, int _mp)
+        {
+            this._name = _name;
+            this._hp = _hp;
+            this._mp = _mp;
+            this.x = 0;
+            this.y = 0;
+            this.mapNum = 0;
+        }
+    }
 }

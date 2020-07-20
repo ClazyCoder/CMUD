@@ -14,10 +14,14 @@ namespace CMUD
         bool _isRunning;
         TcpListener _server;
         List<Client> _clients;
+        ObjectManager obj_mgr;
+        MapManager map_mgr;
         Game()
         {
             _isRunning = false;
             _clients = new List<Client>();
+            obj_mgr = new ObjectManager();
+            map_mgr = new MapManager();
         }
         void Calc()
         {
@@ -54,7 +58,7 @@ namespace CMUD
 
                 }
             }
-            catch(Exception ex)
+            catch(Exception)
             {
                 
             }

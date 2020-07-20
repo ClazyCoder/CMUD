@@ -30,5 +30,9 @@ namespace CMUD
         {
             this.objList[objCount++] = obj;
         }
+        public void DoRandomEvents()
+        {
+            // TODO : 플레이어 제외한 오브젝트들 이벤트 랜덤으로 수행시키기
+        }
     }
 }
