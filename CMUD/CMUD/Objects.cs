@@ -21,14 +21,24 @@ namespace CMUD
             this.x = x;
             this.y = y;
         }
+        public virtual string getInfo()
+        {
+            string info = "이름 : " + this._name + "\n";
+            info = info + "체력 : " + this._hp + "\n";
+            info = info + "마력 : " + this._mp + "\n";
+            info = info + "위치 : (" + this.x + ", " + this.y + ")\n";
+            return info;
+        }
     }
     class Player : Object
     {
+        int _level;
         public Player(string _name, int _hp, int _mp)
         {
             this._name = _name;
             this._hp = _hp;
             this._mp = _mp;
+            this._level = 0;
             this.x = 0;
             this.y = 0;
             this.mapNum = 0;

@@ -16,6 +16,10 @@ namespace CMUD
         {
             // TODO : 파일 열기(형식구상)
         }
+        public void LoadMapsFromDB()
+        {
+            // TODO : DataBase에서 map 정보 불러오기
+        }
     }
     class ObjectManager
     {
