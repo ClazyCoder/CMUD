@@ -55,13 +55,20 @@ namespace CMUD
                 NetworkStream ns = client.getStream();
                 while (_isRunning)
                 {
-
+                    byte[] buffer = new byte[1024];
+                    int size = ns.Read(buffer);
+                    string message = Encoding.ASCII.GetString(buffer, 0, size);
+                    MessageProcessRoutine(message);
                 }
             }
             catch(Exception)
             {
                 
             }
+        }
+        public void MessageProcessRoutine(string message)
+        {
+            
         }
     }
     class Client

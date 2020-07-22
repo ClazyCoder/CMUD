@@ -16,18 +16,22 @@ namespace CMUD
         {
 
         }
-        public void Move(int x, int y)
+        public virtual void Move(int x, int y)
         {
             this.x = x;
             this.y = y;
         }
-        public virtual string getInfo()
+        public virtual string GetInfo()
         {
             string info = "이름 : " + this._name + "\n";
             info = info + "체력 : " + this._hp + "\n";
             info = info + "마력 : " + this._mp + "\n";
             info = info + "위치 : (" + this.x + ", " + this.y + ")\n";
             return info;
+        }
+        public virtual void Attack(Object target)
+        {
+            target._hp -= 1;
         }
     }
     class Player : Object

@@ -30,13 +30,17 @@ namespace CMUD
             objCount = 0;
             objList = new Object[100];
         }
-        public void addObject(Object obj)
+        public void AddObject(Object obj)
         {
             this.objList[objCount++] = obj;
         }
         public void DoRandomEvents()
         {
             // TODO : 플레이어 제외한 오브젝트들 이벤트 랜덤으로 수행시키기
+        }
+        public void LoadObjects(string filename)
+        {
+            // TODO : 파일에서 저장된 오브젝트들 불러오기
         }
     }
 }
