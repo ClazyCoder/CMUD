@@ -37,6 +37,7 @@ namespace CMUD
     class Player : Object
     {
         int _level;
+        double Damage;
         public Player(string _name, int _hp, int _mp)
         {
             this._name = _name;
@@ -46,6 +47,10 @@ namespace CMUD
             this.x = 0;
             this.y = 0;
             this.mapNum = 0;
+        }
+        public override void Attack(Object target)
+        {
+            
         }
     }
     class Monster : Object
@@ -58,6 +63,14 @@ namespace CMUD
             this.x = 0;
             this.y = 0;
             this.mapNum = 0;
+        }
+        public override void Attack(Object target)
+        {
+            // 공격 추가
+        }
+        public override void Move(int x, int y)
+        {
+            // 이동 추가
         }
     }
     class NPC : Object
