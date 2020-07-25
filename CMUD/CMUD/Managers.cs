@@ -25,8 +25,10 @@ namespace CMUD
     {
         int objCount;
         Object[] objList;
+        Random _dice;
         public ObjectManager()
         {
+            _dice = new Random();
             objCount = 0;
             objList = new Object[100];
         }
@@ -37,6 +39,19 @@ namespace CMUD
         public void DoRandomEvents()
         {
             // TODO : 플레이어 제외한 오브젝트들 이벤트 랜덤으로 수행시키기
+            int act = _dice.Next(0, 100);
+            if(act < 10)
+            {
+
+            }
+            else if(act < 20)
+            {
+
+            }
+            else
+            {
+
+            }
         }
         public void LoadObjects(string filename)
         {
