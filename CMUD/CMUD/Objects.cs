@@ -55,6 +55,7 @@ namespace CMUD
     }
     class Monster : Object
     {
+        Random _dice;
         public Monster(string _name, int _hp, int _mp)
         {
             this._name = _name;
@@ -63,6 +64,7 @@ namespace CMUD
             this.x = 0;
             this.y = 0;
             this.mapNum = 0;
+            this._dice = new Random();
         }
         public override void Attack(Object target)
         {
@@ -71,6 +73,11 @@ namespace CMUD
         public override void Move(int x, int y)
         {
             // 이동 추가
+        }
+        public void Decision()
+        {
+            int act = _dice.Next(0, 100);
+            // TODO : 랜덤으로 행동 수행하기
         }
     }
     class NPC : Object
