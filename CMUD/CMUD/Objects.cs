@@ -12,6 +12,7 @@ namespace CMUD
         protected int x;
         protected int y;
         protected int mapNum;
+        protected string lore;
         public Object()
         {
 
@@ -72,12 +73,22 @@ namespace CMUD
         }
         public override void Move(int x, int y)
         {
-            // 이동 추가
+            this.x = x;
+            this.y = y;
+            // 추가 행동
         }
         public void Decision()
         {
             int act = _dice.Next(0, 100);
-            // TODO : 랜덤으로 행동 수행하기
+            if(act > 50)
+            {
+
+            }
+            else
+            {
+
+            }
+            // 랜덤으로 행동 수행
         }
     }
     class NPC : Object

@@ -62,13 +62,13 @@
             // 저장ToolStripMenuItem
             // 
             this.저장ToolStripMenuItem.Name = "저장ToolStripMenuItem";
-            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.저장ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.저장ToolStripMenuItem.Text = "저장";
             // 
             // 불러오기ToolStripMenuItem
             // 
             this.불러오기ToolStripMenuItem.Name = "불러오기ToolStripMenuItem";
-            this.불러오기ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.불러오기ToolStripMenuItem.Size = new System.Drawing.Size(122, 22);
             this.불러오기ToolStripMenuItem.Text = "불러오기";
             // 
             // 브러시ToolStripMenuItem
@@ -86,21 +86,21 @@
             this.물ToolStripMenuItem.Checked = true;
             this.물ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.물ToolStripMenuItem.Name = "물ToolStripMenuItem";
-            this.물ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.물ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.물ToolStripMenuItem.Text = "물";
             this.물ToolStripMenuItem.Click += new System.EventHandler(this.물ToolStripMenuItem_Click);
             // 
             // 산ToolStripMenuItem
             // 
             this.산ToolStripMenuItem.Name = "산ToolStripMenuItem";
-            this.산ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.산ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.산ToolStripMenuItem.Text = "산";
             this.산ToolStripMenuItem.Click += new System.EventHandler(this.산ToolStripMenuItem_Click);
             // 
             // 평지ToolStripMenuItem
             // 
             this.평지ToolStripMenuItem.Name = "평지ToolStripMenuItem";
-            this.평지ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.평지ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
             this.평지ToolStripMenuItem.Text = "평지";
             this.평지ToolStripMenuItem.Click += new System.EventHandler(this.평지ToolStripMenuItem_Click);
             // 
@@ -110,6 +110,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 561);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
