@@ -57,5 +57,15 @@ namespace CMUD
         {
             // TODO : 파일에서 저장된 오브젝트들 불러오기
         }
+        public Object FindObject(string name)
+        {
+            Object temp = new Object();
+            return temp;
+        }
+        public Object FindObject(int x, int y)
+        {
+            Object temp = new Object();
+            return temp;
+        }
     }
 }
