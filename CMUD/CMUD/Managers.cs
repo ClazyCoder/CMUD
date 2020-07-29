@@ -14,7 +14,15 @@ namespace CMUD
         }
         public void LoadMaps(string filename)
         {
-            // TODO : 파일 열기(형식구상)
+            int[,] map = new int[100, 100];
+            string[] lines = File.ReadAllLines(@filename);
+            foreach(string line in lines)
+            {
+                foreach(char ch in line)
+                {
+                    // 맵에 정보추가
+                }
+            }
         }
         public void LoadMapsFromDB()
         {
