@@ -8,21 +8,24 @@ namespace CMUD
     class MapManager
     {
         Map[] mapList;
+        int _mapCount;
         public MapManager()
         {
             mapList = new Map[10];
         }
-        public void LoadMaps(string filename)
+        public void LoadMap(string filename)
         {
             int[,] map = new int[100, 100];
             string[] lines = File.ReadAllLines(@filename);
-            foreach(string line in lines)
+            string mapName = lines[0];
+            for(int i=1;i<lines.Length; i++)
             {
-                foreach(char ch in line)
+                for(int j=0;j<lines.Length; j++)
                 {
-                    // 맵에 정보추가
+                    map[i-1, j] = lines[i][j];
                 }
             }
+            mapList[_mapCount++] = new Map(mapName,map);
         }
         public void LoadMapsFromDB()
         {
