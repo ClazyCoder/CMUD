@@ -39,6 +39,7 @@ namespace CMUD
     {
         int _level;
         double Damage;
+        Inventory _inven;
         public Player(string _name, int _hp, int _mp)
         {
             this._name = _name;
@@ -57,6 +58,7 @@ namespace CMUD
     class Monster : Object
     {
         Random _dice;
+        Inventory _inven;
         public Monster(string _name, int _hp, int _mp)
         {
             this._name = _name;
@@ -102,5 +104,9 @@ namespace CMUD
             this.y = 0;
             this.mapNum = 0;
         }
+    }
+    class Inventory
+    {
+        // TODO : 인벤토리 구상
     }
 }
