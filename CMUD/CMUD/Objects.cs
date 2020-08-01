@@ -107,6 +107,25 @@ namespace CMUD
     }
     class Inventory
     {
-        // TODO : 인벤토리 구상
+        int[] slot;
+        int size;
+        public Inventory()
+        {
+            size = 10;
+            slot = new int[size];
+        }
+        public Inventory(int size)
+        {
+            this.size = size;
+            slot = new int[size];
+        }
+        public void AddItem()
+        {
+            // Item 추가
+        }
+        public void DelItem()
+        {
+            // Item 제거
+        }
     }
 }
