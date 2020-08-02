@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
 
@@ -107,25 +108,28 @@ namespace CMUD
     }
     class Inventory
     {
-        int[] slot;
-        int size;
+        List<Item> slot;
         public Inventory()
         {
-            size = 10;
-            slot = new int[size];
+            slot = new List<Item>();
         }
-        public Inventory(int size)
+        public void AddItem(Item item)
         {
-            this.size = size;
-            slot = new int[size];
+            slot.Add(item);
         }
-        public void AddItem()
+        public void DelItem(Item item)
         {
-            // Item 추가
+            slot.Remove(item);
         }
-        public void DelItem()
+        public void DelItem(int index)
         {
-            // Item 제거
+            slot.RemoveAt(index);
         }
+    }
+    class Item
+    {
+        string name;
+        double durability;
+        string lore;
     }
 }
