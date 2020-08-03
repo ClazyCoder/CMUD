@@ -68,7 +68,15 @@ namespace CMUD
         }
         public void MessageProcessRoutine(string message)
         {
-            
+            string[] parsedMessage = message.Split('/');
+            if (parsedMessage[0] == "Login")
+            {
+                // 로그인
+            }
+            else if(parsedMessage[0] == "SignUp")
+            {
+                // 회원가입
+            }
         }
     }
     class Client

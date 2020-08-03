@@ -131,5 +131,17 @@ namespace CMUD
         string name;
         double durability;
         string lore;
+        public Item()
+        {
+            name = "";
+            durability = 1.0;
+            lore = "";
+        }
+        public Item(string name, double durability, string lore)
+        {
+            this.name = name;
+            this.durability = durability;
+            this.lore = lore;
+        }
     }
 }
