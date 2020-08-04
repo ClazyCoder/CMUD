@@ -8,8 +8,8 @@ namespace CMUD
     class Object
     {
         protected string _name;
-        protected int _hp;
-        protected int _mp;
+        protected double _hp;
+        protected double _mp;
         protected int x;
         protected int y;
         protected int mapNum;
@@ -35,6 +35,11 @@ namespace CMUD
         {
             target._hp -= 1;
         }
+        public double HP
+        {
+            get { return _hp; }
+            set { _hp = value; }
+        }
     }
     class Player : Object
     {
@@ -53,7 +58,7 @@ namespace CMUD
         }
         public override void Attack(Object target)
         {
-            
+            target.HP -= Damage;
         }
     }
     class Monster : Object
@@ -72,7 +77,7 @@ namespace CMUD
         }
         public override void Attack(Object target)
         {
-            // 공격 추가
+            
         }
         public override void Move(int x, int y)
         {
@@ -125,6 +130,15 @@ namespace CMUD
         {
             slot.RemoveAt(index);
         }
+        public bool findItem(string itemName)
+        {
+            foreach(Item i in slot)
+            {
+                if (i.Name == itemName)
+                    return true;
+            }
+            return false;
+        }
     }
     class Item
     {
@@ -142,6 +156,11 @@ namespace CMUD
             this.name = name;
             this.durability = durability;
             this.lore = lore;
+        }
+        public string Name
+        {
+            get { return name; }
+            set { name = value; }
         }
     }
 }
