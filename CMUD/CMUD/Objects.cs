@@ -16,7 +16,13 @@ namespace CMUD
         protected string lore;
         public Object()
         {
-
+            _name = "";
+            _hp = 0.0;
+            _mp = 0.0;
+            x = 0;
+            y = 0;
+            mapNum = 0;
+            lore = "";
         }
         public virtual void Move(int x, int y)
         {
