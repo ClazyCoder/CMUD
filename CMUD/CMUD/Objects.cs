@@ -46,6 +46,11 @@ namespace CMUD
             get { return _hp; }
             set { _hp = value; }
         }
+        public double MP
+        {
+            get { return _mp; }
+            set { _mp = value; }
+        }
     }
     class Player : Object
     {
