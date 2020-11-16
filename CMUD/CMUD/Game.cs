@@ -25,7 +25,7 @@ namespace CMUD
         }
         void Calc()
         {
-
+            // TODO : 게임 연산 부분
         }
         public void Start()
         {
@@ -71,11 +71,11 @@ namespace CMUD
             string[] parsedMessage = message.Split('/');
             if (parsedMessage[0] == "Login")
             {
-                // 로그인
+                // TODO : 로그인
             }
             else if(parsedMessage[0] == "SignUp")
             {
-                // 회원가입
+                // TODO : 회원가입
             }
         }
     }

@@ -79,4 +79,9 @@ namespace CMUD
             return temp;
         }
     }
+    public class DatabaseManager
+    {
+        string db;
+        // TODO : DB 매니저 내부 구조 구성
+    }
 }
