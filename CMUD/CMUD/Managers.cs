@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Data.Sqlclient;
 
 namespace CMUD
 {
@@ -81,7 +82,9 @@ namespace CMUD
     }
     public class DatabaseManager
     {
-        string db;
-        // TODO : DB 매니저 내부 구조 구성
+        string ip; // 디비 아이피
+        string id; // 디비 아이디
+        string pw; // 디비 비밀번호
+        
     }
 }

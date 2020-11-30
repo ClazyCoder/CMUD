@@ -56,7 +56,7 @@ namespace CMUD
                 while (_isRunning)
                 {
                     byte[] buffer = new byte[1024];
-                    int size = ns.Read(buffer);
+                    int size = ns.Read(buffer, 0, 1024);
                     string message = Encoding.ASCII.GetString(buffer, 0, size);
                     MessageProcessRoutine(message);
                 }
