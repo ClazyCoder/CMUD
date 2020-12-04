@@ -99,6 +99,8 @@ namespace CMUD
         private DatabaseManager()
         {
             // TODO : DB 연결 및 초기화
+            ip = "127.0.0.1";
+            port = "3306";
             conn = new SqlConnection();
         }
         public static DatabaseManager Instance

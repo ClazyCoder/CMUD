@@ -14,14 +14,14 @@ namespace CMUD
         bool _isRunning;
         TcpListener _server;
         List<Client> _clients;
-        ObjectManager obj_mgr;
-        MapManager map_mgr;
+        ObjectManager _objManager;
+        MapManager _mapManager;
         Game()
         {
             _isRunning = false;
             _clients = new List<Client>();
-            obj_mgr = new ObjectManager();
-            map_mgr = new MapManager();
+            _objManager = ObjectManager.Instance;
+            _mapManager = MapManager.Instance;
         }
         void Calc()
         {
@@ -38,6 +38,7 @@ namespace CMUD
             _server.Start();
             while (_isRunning)
             {
+
                 Client client = new Client(_server.AcceptTcpClient());
                 lock (_clients)
                 {
